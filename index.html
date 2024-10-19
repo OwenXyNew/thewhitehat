@@ -4,8 +4,27 @@
 <head>
   <meta charset="utf-8">
   <title>The White Hat</title>
-  <script src=""
+   <script>
+        function checkPassword() {
+            var input = document.getElementById("password").value;
+            var correctPassword = "yourPassword123";
+            if (input === correctPassword) {
+                document.getElementById("content").style.display = "block";
+                document.getElementById("login").style.display = "none";
+            } else {
+                alert("Incorrect password. Try again.");
+            }
+        }
+    </script>
 </head>
+<body>
+    <div id="login">
+        <h2>Please enter the password:</h2>
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+
+    <div id="content" style="display: none;">
 <section>
   <h1>The White Hat</h1>
   <h2>I Need the Hat</h2>
